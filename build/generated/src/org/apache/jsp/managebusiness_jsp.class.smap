@@ -1,0 +1,20 @@
+SMAP
+managebusiness_jsp.java
+JSP
+*S JSP
+*F
++ 0 managebusiness.jsp
+managebusiness.jsp
+*L
+1,270:50
+271,4:321
+274,2:325
+277,15:329
+291,4:344
+295,5:348,3
+300,2:363
+302:365,3
+303,3:368
+306,2:372
+307,101:374
+*E
