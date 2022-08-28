@@ -316,9 +316,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Awesome Support</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Reporting & Dashboard</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Get better visibility and hold on every metric that matters.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -332,9 +332,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Unlimited Colors</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">IVR</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Effectively route calls to the right department based on caller input.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -348,9 +348,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Strategy Solutions</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Auto Dailer</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Make outbound calling easy with an automated dialing system.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -364,9 +364,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Digital Design</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">ACD</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Auto distribute your calls  to the best-suited agent via routing.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -380,9 +380,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Easy to customize</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">CTI</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Easy access to all the customer information for better conversion.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -396,9 +396,9 @@
                         </div>
                         <div class="services-desc">
                             <div class="service-title mb-2 position-relative">
-                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Truly Multipurpose</a></h5>
+                                <h5 class="font-weight-normal mb-3"><a href="#" class="text-dark">Call Recording</a></h5>
                             </div>
-                            <p class="text-muted mb-3 f-14">Sed ut perspiciatis unde sit omnise iste natus voluptatem site accusantium doloremque laudantium totam.</p>
+                            <p class="text-muted mb-3 f-14">Recording every call and use these recordings to score your agents.</p>
                             <p class="mb-0 text-uppercase f-13"><a href="#" class="text-primary">learn more<i class="mdi mdi-arrow-right ml-2"></i></a></p>
                         </div>
                     </div>
@@ -543,7 +543,7 @@
                             </ul>
                         </div>
                         <div class="pl-4 mb-4 mt-2">
-                            <a href="#" class="btn btn-outline btn-sm">Buy Now</a>
+                            <a href="login.jsp" class="btn btn-outline btn-sm">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -572,7 +572,7 @@
                              </ul>
                         </div>
                         <div class="pl-4 mb-4 mt-2">
-                            <a href="#" class="btn btn-outline active btn-sm">Buy Now</a>
+                            <a href="login.jsp" class="btn btn-outline active btn-sm">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -603,7 +603,7 @@
                             </ul>
                         </div>
                         <div class="pl-4 mb-4 mt-2">
-                            <a href="#" class="btn btn-outline btn-sm">Buy Now</a>
+                            <a href="login.jsp" class="btn btn-outline btn-sm">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -635,7 +635,7 @@
                             </ul>
                         </div>
                         <div class="pl-4 mb-4 mt-2">
-                            <a href="#" class="btn btn-outline btn-sm">Buy Now</a>
+                            <a href="login.jsp" class="btn btn-outline btn-sm">Buy Now</a>
                         </div>
                     </div>
                 </div>

@@ -55,6 +55,9 @@ background: #17A2B8;
     background: yellow ;
      color: #000;
 }
+.move{
+    text-align: center;
+}
   @media (max-width: 576px) {
     .image1{
       display: none;

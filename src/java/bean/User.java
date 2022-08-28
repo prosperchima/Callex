@@ -6,22 +6,22 @@ import java.io.Serializable;
 public class User implements Serializable{
     private String fname;
     private String lname;
-    private String phone;
     private String email;
+    private String phone;
     
     
     public User(){
         this.fname="";
         this.lname="";
-        this.phone="";
         this.email="";
+        this.phone="";
     }
 
-    public User(String fname, String lname, String phone, String email) {
+    public User(String fname, String lname, String email,String phone) {
         this.fname = fname;
         this.lname = lname;
-        this.phone = phone;
         this.email = email;
+        this.phone = phone;
     }
 
     public String getFname() {
@@ -40,20 +40,19 @@ public class User implements Serializable{
         this.lname = lname;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
     
     

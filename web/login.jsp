@@ -24,7 +24,7 @@
 <body class="bg-gradient-white">
   <header>
       <div class=" d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-gradient-white border-bottom shadow-sm">
-          <h5 class="my-0 mr-md-auto font-weight-normal text-primary"><i class="fas fa- fa-2x"></i>Call<span class="text-warning">Ex</span></h5>
+          <h5 class="my-0 mr-md-auto font-weight-normal text-primary"><i class="fas fa- fa-2x"></i>Call<span class="">Ex</span></h5>
           <!-- <img class="photo my-0 mr-md-auto font-weight-normal" src="images/omney1.png"> -->
           <nav class="my-2 my-md-0 mr-md-3">
 <!--                     <a class="p-2 text-dark" href="index.html">Home</a>
@@ -61,7 +61,7 @@
                           <input type="password" class="form-control" placeholder="password" id="password" name="l_password" required="">
                       </div>
                       
-                      <input type="submit" class="form-button button-l margin-b text-white" value="Login in">     
+                      <input type="submit" style="background-color: #0E6CFF" class=" button-l margin-b text-white" value="Login in">     
                        <input type="text" class="form-button button-l margin-b text-white" name="signal" value="login"hidden>     
                   </form>
                   <p class="margin-t text-dark"><small> Callex &copy; 2020</small> </p>

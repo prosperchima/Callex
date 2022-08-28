@@ -28,7 +28,7 @@ public class Processor extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, ClassNotFoundException {
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         
         String url = "/index.jsp";
@@ -47,14 +47,14 @@ public class Processor extends HttpServlet {
                 boolean busnessowners = ConnectDb.register(fname,lname,email,phone,password);
                 url ="/login.jsp";
                 break;
-                
+            
             case "login":
             String l_phone = request.getParameter("l_phone");
             String l_password = request.getParameter("l_password");
 
 //           String b_login = ConnectDb.login();
             try(Connection db_conn = ConnectDb.connectNow()){
-                String sql = "SELECT * FROM busnessowners WHERE phone = ?";
+                String sql = "SELECT * FROM users WHERE phone = ?";
                 PreparedStatement stmt = db_conn.prepareStatement(sql);
                 stmt.setString(1, l_phone);
 
@@ -64,7 +64,7 @@ public class Processor extends HttpServlet {
                     if(l_password.equals(db_pass)){
                         HttpSession session = request.getSession();
                         session.setAttribute("l_phone", l_phone);
-                        url = "/dashboard.jsp";
+                        url = "/plan.jsp";
                         msg =""+l_phone;
                         
                     }else{
@@ -81,6 +81,7 @@ public class Processor extends HttpServlet {
                 Logger.getLogger(ConnectDb.class.getName()).log(Level.SEVERE, null, e);
             }
             break;
+            
                 
             case "update":
                 String ufname = request.getParameter("fname");
@@ -101,11 +102,27 @@ public class Processor extends HttpServlet {
                     case  "SQL error":
                         url ="/sendsms.jsp";
                         break;
+                        
+                        
                     default:
                         url =  "/signup.jsp";
                 }
+                case "ivr_registration":
+                String welcome_message = request.getParameter("welcome");
+                String service_menu_1 = request.getParameter("ServiceMenu1");
+                String response_1 = request.getParameter("Response1");
+                String service_menu_2 = request.getParameter("ServiceMenu2");
+                String response_2 = request.getParameter("Response2");
+                String service_menu_3 = request.getParameter("ServiceMenu3");
+                String response_3 = request.getParameter("Response3");
+                String agent_phone = request.getParameter("AgentPhone");
+      
+                boolean process_ivr = ConnectDb.ivr_registration(welcome_message,service_menu_1,response_1,service_menu_2,response_2,service_menu_3,response_3,agent_phone);
+                url = "/dashboard.jsp";
+             break;
+               
                     
-                        
+               
                 }
         
         
@@ -129,6 +146,8 @@ public class Processor extends HttpServlet {
             processRequest(request, response);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -146,6 +165,8 @@ public class Processor extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
             Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

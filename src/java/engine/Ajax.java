@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author USER
  */
-@WebServlet(name = "Ajax", urlPatterns = {"/Ajax"})
+@WebServlet(name = "Ajax", urlPatterns = {"/ajax"})
 public class Ajax extends HttpServlet {
 
     /**
@@ -52,10 +52,7 @@ public class Ajax extends HttpServlet {
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(Ajax.class.getName()).log(Level.SEVERE, null, ex);
             }
-{
-            
-            
-        }
+
         }
     }
 

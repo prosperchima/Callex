@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/src/java/engine/Processor.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/dashboard.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/src/java/engine/ConnectDb.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/index.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/login.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/plan.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/js/function.js</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/CALLEX/web/signup.jsp</file>
+        </group>
     </open-files>
 </project-private>

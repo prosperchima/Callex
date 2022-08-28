@@ -1,3 +1,4 @@
+<%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -67,8 +68,13 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Check out:</h6>
+            <a class="collapse-item" href="plan.jsp">Plans</a>
             <a class="collapse-item" href="addbusiness.jsp">Add Business</a>
             <a class="collapse-item" href="viewbusiness.jsp">View Business</a>
+            <a class="collapse-item" href="sendsms.jsp">Send SMS</a>
+            <a class="collapse-item" href="sendsms.jsp">Call Distribution Rule</a>
+            <a class="collapse-item" href="sendsms.jsp">Active Integration</a>
+            <a class="collapse-item" href="sendsms.jsp">Active IVR</a>
             <a class="collapse-item" href="sendsms.jsp">Send SMS</a>
           </div>
         </div>
@@ -253,58 +259,64 @@
           <h2 style="padding-top:30px;">Existing Users</h2>
                             <h5 class="h5 mb-3 font-weight-normal" style="color:blue;" id="feedback"></h5>
                             <div class="table-responsive">
-                                <table class="table table-striped table-sm">
+                                <table id="table-to-refresh" class="table table-striped table-sm">
                                     <thead>
                                         <tr>
                                           <th>S/N</th>
-                                          <th>Phone Number</th>
                                           <th>First Name</th>
-                                          <th>Last Name</th>
+                                          <th>Second Name</th>
                                           <th>Email</th>
+                                          <th>phone</th>
                                           <th></th>
                                           <th></th>
                                         </tr>
                                     </thead>
                                   
                                     <tbody>
-                                        <%
-                                            User user = (User) request.getAttribute("user");
-                                            
-                                        
-                                        %>
+                                       
                                         <%
                                        
-                                        Connection dbConn = ConnectDb.connectNow();
+                                            ArrayList<User> users = new ArrayList();
+                                       Connection dbConn = ConnectDb.connectNow();
                                             String sql = "SELECT * FROM busnessowners";
                                             PreparedStatement stmt = dbConn.prepareStatement(sql);
                                             ResultSet result = stmt.executeQuery();
                                             
                                             while(result.next()){
-                                                String phone = result.getString("phone");
                                                 String fname = result.getString("fname");
                                                 String lname = result.getString("lname");
                                                 String email = result.getString("email");
+                                                String phone = result.getString("phone");
+                                                String password = result.getString("password");
 //                                                String status = result.getString("status");
+                                                User db_user = new User(fname, lname, email, phone);
+                                                users.add(db_user);
                                                 
+                                            };
                                             
+                                            int a_1 = users.size();
+                                               for(int i =0; i < a_1; i++){
+                                                   User n_user = users.get(i);
                                         
                                     %>
                                        
                                         <tr>
-                                            <td>1</td>
-                                            <td><%=result.getString("phone") %></td>
-                                            <td><%=result.getString("fname") %></td>
-                                            <td><%=result.getString("lname") %></td>
-                                            <td><%=result.getString("email") %></td>
-                                            <td><a href="edituser.jsp?phone=<%=phone%>">Edit</a></td>
+                                            <td><%=i+1%></td>
+                                            <td><%=n_user.getFname() %></td>
+                                            <td><%=n_user.getLname() %></td>
+                                            <td><%=n_user.getEmail() %></td>
+                                            <td><%=n_user.getPhone() %></td>
+                                           <td><a href="edituser.jsp?phone=<%=n_user.getPhone() %>">Edit</a></td>
                                             <td><a href="#">Disable</a></td>
                                             <td><a href="#">Delete</a></td>
-                                            <td><button class="btn btn-danger" onclick="delete(this,<%=user.getPhone() %>)">Delete</button></td>
+                                   <td><input class="btn btn-danger" type="button" value="Delete" onclick="prosper(this,'<%=n_user.getPhone() %>')" ></td>
                                        
                                         </tr>
                                         <%   
                                             }
+                                                
                                         %>
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -364,23 +376,24 @@
     </div>
   </div>
   
-<!--  <script>
+  <script>
       
-      function delete (e,userId){
-          
-          $.ajax({
+      
+      
+      function prosper(e, userId){
+              $.ajax({
               type:"POST",
               url:"ajax",
               data:{uid:userId},
-              cache:false,
-              
-              success: function (){
-                  
-                  e.disabled = false;
-              }
+         
+            success: function(response) {
+            $('#table-to-refresh').html(response);
+                }
+            
+           }
           });
-      }     
-  </script>-->
+      } ;    
+  </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

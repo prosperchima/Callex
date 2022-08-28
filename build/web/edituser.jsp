@@ -64,11 +64,16 @@
           <i class="fas fa-fw fa-folder"></i>
           <span>Pages</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+       <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Check out:</h6>
+            <a class="collapse-item" href="plan.jsp">Plans</a>
             <a class="collapse-item" href="addbusiness.jsp">Add Business</a>
             <a class="collapse-item" href="viewbusiness.jsp">View Business</a>
+            <a class="collapse-item" href="sendsms.jsp">Send SMS</a>
+            <a class="collapse-item" href="sendsms.jsp">Call Distribution Rule</a>
+            <a class="collapse-item" href="sendsms.jsp">Active Integration</a>
+            <a class="collapse-item" href="sendsms.jsp">Active IVR</a>
             <a class="collapse-item" href="sendsms.jsp">Send SMS</a>
           </div>
         </div>

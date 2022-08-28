@@ -24,7 +24,7 @@
 <body class="bg-gradient-white">
   <header>
       <div class=" d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-gradient-white border-bottom shadow-sm">
-          <h5 class="my-0 mr-md-auto font-weight-normal text-primary"><i class="fas fa- fa-2x"></i>Call<span class="text-warning">Ex</span></h5>
+          <h5 class="my-0 mr-md-auto font-weight-normal text-primary"><i class="fas fa- fa-2x"></i>Call<span class="">Ex</span></h5>
           <!-- <img class="photo my-0 mr-md-auto font-weight-normal" src="images/omney1.png"> -->
           <nav class="my-2 my-md-0 mr-md-3">
 <!--                     <a class="p-2 text-dark" href="index.html">Home</a>
